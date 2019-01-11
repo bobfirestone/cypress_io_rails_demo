@@ -6,13 +6,13 @@
         - @post.errors.full_messages.each do |message|
           %li= message
 
-  .field
+  .field.title
     = f.label :title
     = f.text_field :title
-  .field
+  .field.body
     = f.label :body
     = f.text_field :body
-  .field
+  .field.author
     = f.label :author
     = f.text_field :author
   .actions

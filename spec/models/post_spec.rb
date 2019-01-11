@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  it "must have a title" do
-    post = Post.new()
-    expect(post.valid?).to be false
+  it "has a title" do
+    expect(Post.new(title: "title").valid?).to be true
+  end
+
+  it "validates presence of title" do
+    expect(Post.new().valid?).to be false
   end
 end

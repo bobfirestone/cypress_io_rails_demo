@@ -174,7 +174,7 @@ ajv@^5.0.0, ajv@^5.1.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-ajv@^6.1.0, ajv@^6.5.5:
+ajv@^6.1.0, ajv@^6.5.5, ajv@^6.6.2:
   version "6.6.2"
   resolved "https://artifactory.pinnacol.com:443/artifactory/api/npm/npm-development/ajv/-/ajv-6.6.2.tgz#caceccf474bf3fc3ce3b147443711a24063cc30d"
   integrity sha1-ys7M9HS/P8POOxR0Q3EaJAY8ww0=
