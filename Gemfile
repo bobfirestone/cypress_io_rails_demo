@@ -8,8 +8,6 @@ gem 'rails', '~> 5.2.2'
 
 gem 'mongoid'
 
-gem 'swagger-blocks'
-
 gem 'haml-rails'
 
 # Use Puma as the app server
