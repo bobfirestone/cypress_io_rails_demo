@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import Ajv from "ajv";
-
 context('api/v1/post show', () => {
   const url = 'api/v1/posts/test-post-1'
   
