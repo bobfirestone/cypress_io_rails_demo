@@ -2,12 +2,8 @@
 
 import Ajv from "ajv";
 
-context('Posts#show.json', () => {
-  // beforeEach(() => {
-  //   cy.request("posts.json")
-  // })
-
-  const url = 'posts/test-post-1.json'
+context('api/v1/post show', () => {
+  const url = 'api/v1/posts/test-post-1'
   
   const result = () => cy.request(url)
 
@@ -22,19 +18,24 @@ context('Posts#show.json', () => {
     result().its("status").should("equal", 200)
   })
 
-  it('objects have slugs', () => {
+  it('object has a slug element', () => {
     result()
       .its('body')
       .its('slug')
       .should('include', 'test-post-1');
-    // cy.request(url)
-    //   .its('body')
-    // expect(getItems()).to.have.all.keys('id', 'slug', 'title', 'body')
   })
   
-  // it('has a title', () => {
-  //   cy.contains("Title")
-  //   cy.contains("Body")
-  //   cy.contains("Author")
-  // })
+  it('object has a title element', () => {
+    result()
+      .its('body')
+      .its('title')
+      .should('include', 'Title 1');
+  })
+  
+  it('object has a body element', () => {
+    result()
+      .its('body')
+      .its('body')
+      .should('include', 'Body 1');
+  })
 })
