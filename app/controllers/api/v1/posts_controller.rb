@@ -7,7 +7,7 @@ module Api
       end
 
       def show
-        @post = ::Post.where(slug: params[:slug]).first
+        @post = ::Post.find_by(slug: params[:slug])
         render json: @post, status: :ok
       end
     end
