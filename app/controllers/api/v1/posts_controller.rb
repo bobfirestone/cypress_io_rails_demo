@@ -1,14 +1,19 @@
 module Api
   module V1
     class PostsController < ApplicationController
+      rescue_from Mongoid::Errors::DocumentNotFound, with: :record_not_found
+      
       def index
         @posts = ::Post.all
-        render json: @posts, status: :ok
       end
 
       def show
-        @post = ::Post.where(slug: params[:slug]).first
-        render json: @post, status: :ok
+        @post = ::Post.find_by(slug: params[:slug])
+      end
+
+      private
+      def record_not_found(error)
+        render json: {message: "no record found"}, status: :not_found
       end
     end
   end

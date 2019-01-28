@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-context('Posts#show.json', () => {
-  const url = 'posts.json'
+context('api/v1/posts index', () => {
+  const url = 'api/v1/posts'
 
   const getItems = () =>
     cy.request(url)
