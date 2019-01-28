@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-context('api/v1/post show', () => {
+context('api/v1/posts show', () => {
   const url = 'api/v1/posts/test-post-1'
   
   const result = () => cy.request(url)

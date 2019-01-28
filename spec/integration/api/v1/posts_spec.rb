@@ -21,7 +21,7 @@ describe 'Posts API' do
         }
         
         schema type: :object,
-          title: "PostsApiV1",
+          title: "PostsApiV1-200",
           properties: {
             _id: { type: :object, properties: {
               "$oid": {type: :string}
@@ -41,7 +41,32 @@ describe 'Posts API' do
       end
 
       response '404', 'post not found' do
+        examples 'application/json' => {
+          "message": "no record found"
+        }
+
+        schema type: :object,
+          title: "PostsApiV1-404",
+          properties: {
+            message: { type: :string }
+          }
+
         let(:slug) { 'invalid' }
+        run_test!
+      end
+
+      response '500', 'server error' do
+        examples 'application/json' => {
+          "message": "server error"
+        }
+
+        schema type: :object,
+          title: "PostsApiV1-500",
+          properties: {
+            message: { type: :string }
+          }
+
+        let(:slug) { 'raise-500' }
         run_test!
       end
     end

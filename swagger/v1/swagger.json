@@ -40,7 +40,7 @@
             },
             "schema": {
               "type": "object",
-              "title": "PostsApiV1",
+              "title": "PostsApiV1-200",
               "properties": {
                 "_id": {
                   "type": "object",
@@ -81,7 +81,38 @@
             }
           },
           "404": {
-            "description": "post not found"
+            "description": "post not found",
+            "examples": {
+              "application/json": {
+                "message": "no record found"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "title": "PostsApiV1-404",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "server error",
+            "examples": {
+              "application/json": {
+                "message": "server error"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "title": "PostsApiV1-500",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
