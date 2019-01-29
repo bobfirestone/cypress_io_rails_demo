@@ -94,8 +94,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  config.before(:suite) { Percy::Capybara.initialize_build }
-  config.after(:suite) { Percy::Capybara.finalize_build }
-
-  # Percy.config.default_widths = [375, 1280]
 end
