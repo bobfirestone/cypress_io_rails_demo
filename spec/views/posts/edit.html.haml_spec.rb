@@ -5,6 +5,7 @@ RSpec.describe "posts/edit", type: :view do
     @post = assign(:post, Post.create!(
       :title => "MyString",
       :body => "MyString",
+      slug: "post-edit-test-slug-1",
       :author => "MyString"
     ))
   end

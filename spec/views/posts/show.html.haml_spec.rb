@@ -4,6 +4,7 @@ RSpec.describe "posts/show", type: :view do
   before(:each) do
     @post = assign(:post, Post.create!(
       :title => "Title",
+      slug: "post-show-test-slug",
       :body => "Body",
       :author => "Author"
     ))

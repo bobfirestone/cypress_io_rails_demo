@@ -5,7 +5,7 @@ class Post
   field :slug, type: String
   field :title, type: String
   field :body, type: String
-  field :author, type: String
+  field :author, type: String, default: ""
 
   validates :title, presence: true
   validates :slug, presence: true

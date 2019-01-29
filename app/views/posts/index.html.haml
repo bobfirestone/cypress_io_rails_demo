@@ -18,9 +18,7 @@
         %td= post.title
         %td= post.body
         %td= post.author
-        %td= link_to 'Show', post_path(post.slug)
-        %td= link_to 'Edit', edit_post_path(post.id)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', post_path(post)
 
 %br
 

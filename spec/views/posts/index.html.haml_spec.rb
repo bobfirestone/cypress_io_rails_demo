@@ -6,11 +6,13 @@ RSpec.describe "posts/index", type: :view do
       Post.create!(
         :title => "Title",
         :body => "Body",
+        slug: "post-index-test-slug-1",
         :author => "Author"
       ),
       Post.create!(
         :title => "Title",
         :body => "Body",
+        slug: "post-index-test-slug-2",
         :author => "Author"
       )
     ])
