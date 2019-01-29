@@ -15,4 +15,4 @@ _2. start cypress_
 `yarn run cypress:open`
 
 _3. run cypress tests and report to percy_
-`yarn run percy exec -- yarn run cypress:open`
+`yarn run percy exec -- cypress run`
